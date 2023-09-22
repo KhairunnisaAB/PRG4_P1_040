@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" style="background-image: url(background.jpg)">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Sidebar - Brand -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <div>
+                            <img src="toko.png" style="width: 80px; height: 60px" >
+                        </div>
+                        <div class="sidebar-brand-text mx-3" style="color:#0F2C59">
+                            <span style="font-weight: bold; font-size: 24px; color: #0F2C59;">Nisa's Bakery</span>
+                        </div>
+                    </a>
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                 aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                               placeholder="Search for..." aria-label="Search"
+                                               aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span style="font-size: 14px; margin-right: 10px;">Khairunnisa Aditia Basri</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div style="text-align: center;">
+
+                        <img src="roti.jpg"
+                             alt="Deskripsi Gambar" width="800" height="400">
+                        <br /><br /><br /><br />
+                    </div>
+                        <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center mb-4">
+                        <h1 class="h3 mb-0 text-primary font-weight-bold" style="margin-right: 970px">Dashboard</h1>
+
+                        <!-- Button Transaksi (Scroll) -->
+
+                        <button class="btn btn-primary justify-content-between" style="margin-right: 30px;" onclick="scrollToForm()">Transaksi</button>
+                        <script>
+                            function scrollToForm() {
+                                // Mendapatkan elemen form
+                                var form = document.getElementById("myForm");
+
+                                // Menggunakan metode scrollIntoView() untuk menjalankan scroll ke elemen form
+                                form.scrollIntoView({ behavior: "smooth" });
+                            }
+                        </script>
+
+                        <!-- Button Stok -->
+                        <button class="btn btn-primary justify-content-between" style="margin-right: 30px;" onclick="scrollToFormStock()">Data Stok</button>
+                        <script>
+                            function scrollToFormStock() {
+                                // Mendapatkan elemen form
+                                var form = document.getElementById("pageStock");
+
+                                // Menggunakan metode scrollIntoView() untuk menjalankan scroll ke elemen form
+                                form.scrollIntoView({ behavior: "smooth" });
+                            }
+                        </script>
+
+                        <!-- Button Stok -->
+                        <a class="btn btn-primary2" href="login.html" style="background-color: red">Keluar</a>
+
+                    </div>
+
+
+
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Strawbery Buns Terjual
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp. 250.000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-
+                                               300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Cookies Buns Terjual
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp. 245.000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                Coffee Buns Terjual
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Rp. 32.000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Cheesee Buns Terjual
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp. 158.000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+
+                            <!-- Form Transaction -->
+                            <div class="card shadow mb-4" id="myForm">
+                                <!-- ID bisa digunakan untuk pinter saat scrolling -->
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align:center; font-size:30px">Pembelian Roti</h6>
+                                </div>
+
+                                <div>
+                                    <form onsubmit="return validate()">
+                                        <table id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="font-size: 18px; text-align: left">Tanggal Transaksi</th>
+                                                    <th>
+                                                        <input class="form-control form-control-user" id="tanggal" readonly>
+
+                                                        <!-- Kodingan u/ menambahkan Tanggal -->
+
+                                                        <script>
+                                                            // Fungsi untuk mengisi input dengan tanggal dan waktu saat ini
+                                                            function updateDateTime() {
+                                                                var input = document.getElementById("datetime");
+                                                                var currentDateTime = new Date().toLocaleString();
+                                                                tanggal.value = currentDateTime;
+                                                            }
+
+                                                            // Panggil fungsi untuk mengisi tanggal dan waktu saat halaman dimuat
+                                                            window.onload = updateDateTime;
+                                                        </script>
+                                                    </th>
+                                                    <th style="width: 300px">
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="spacer" colspan="4"></td> <!-- Menambahkan jarak antara baris -->
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="font-size: 18px; text-align: left">Menu</th>
+                                                    <br />
+                                                    <br />
+                                                    <td>
+                                                        <input type="checkbox" id="checkbox1" name="pilihan1" value="Pilihan 1">
+                                                        <label for="checkbox1" style="margin-right: 40px">Strawberry Buns</label>
+                                                        <input type="text" class="form-control form-control-user" id="harga1" placeholder="Rp. 12.000,00" style="width: 180px; display: inline-block; margin-left: 100px; text-align: center">
+                                                        <input type="text" class="form-control form-control-user" id="jumlah1" placeholder="Jumlah" style="width: 120px; display: inline-block; text-align: left; margin-left: 130px">
+
+                                                        <br />
+                                                        <label id="error_jml1" style="color: red"></label> <!-- Elemen untuk pesan kesalahan -->
+                                                        <br />
+
+                                                        <input type="checkbox" id="checkbox2" name="pilihan2" value="Pilihan 2">
+                                                        <label for="checkbox2" style="margin-right: 40px">Cookies Buns</label>
+                                                        <input type="text" class="form-control form-control-user" id="harga2" placeholder="Rp. 12.000,00" style="width:180px; display: inline-block; margin-left: 125px; text-align: center">
+                                                        <input type="text" class="form-control form-control-user" id="jumlah2" placeholder="Jumlah" style="width:120px; display: inline-block; margin-left: 130px">
+
+                                                        <br />
+                                                        <label id="error_jml2" style="color: red"></label> <!-- Elemen untuk pesan kesalahan -->
+                                                        <br />
+
+                                                        <input type="checkbox" id="checkbox3" name="pilihan3" value="Pilihan 3">
+                                                        <label for="checkbox3" style="margin-right: 40px">Coffee Buns</label>
+                                                        <input type="text" class="form-control form-control-user" id="harga3" placeholder="Rp. 12.000,00" style="width:180px; display: inline-block; margin-left: 135px; text-align: center">
+                                                        <input type="text" class="form-control form-control-user" id="jumlah3" placeholder="Jumlah" style="width:120px; display: inline-block; margin-left: 130px">
+
+                                                        <br />
+                                                        <label id="error_jml3" style="color: red"></label> <!-- Elemen untuk pesan kesalahan -->
+                                                        <br />
+
+                                                        <input type="checkbox" id="checkbox4" name="pilihan4" value="Pilihan 4">
+                                                        <label for="checkbox4">Cheese Buns</label>
+                                                        <input type="text" class="form-control form-control-user" id="harga4" placeholder="Rp. 12.000,00" style="width:180px; display: inline-block; margin-left: 167px; text-align: center">
+                                                        <input type="text" class="form-control form-control-user" id="jumlah4" placeholder="Jumlah" style="width:120px; display: inline-block; margin-left: 130px">
+
+                                                        <br />
+                                                        <label id="error_jml4" style="color: red"></label> <!-- Elemen untuk pesan kesalahan -->
+                                                        <label id="all_cb" style="color: red"></label> <!-- Elemen untuk pesan kesalahan -->
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="font-size: 18px; text-align: left">Metode Transaksi</th>
+                                                    <th>
+                                                        <!-- Dropdown dengan pilihan Roti -->
+                                                        <select class="form-control form-control-user">
+                                                            <option value="Roti Strawberry">Tunai</option>
+                                                            <option value="Roti Coklat">Cashless</option>
+                                                        </select>
+                                                    </th>
+                                                    <th style="width: 300px"></th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="spacer" colspan="4"></td> <!-- Menambahkan jarak antara baris -->
+                                                </tr>
+                                                <tr>
+                                                    <th style="width: 300px"></th>
+                                                    <th style="font-size: 18px; text-align: left">Kemasan</th>
+                                                    <th>
+                                                        <input type="radio" name="pilihan" id="radio1" value="Pilihan 1">
+                                                        <label for="radio1" style="margin-right: 210px">Plastik</label>
+
+                                                        <input type="radio" name="pilihan" id="radio2" value="Pilihan 1">
+                                                        <label for="radio2">Box</label>
+                                                    </th>
+                                                    <th style="width: 300px"></th>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>
+                                                        <label id="all_rb" style="color: red"></label> <!-- Elemen untuk pesan kesalahan -->
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="spacer" colspan="4"></td> <!-- Menambahkan jarak antara baris -->
+                                                </tr>
+                                                <tr>
+                                                    <th></th>
+                                                    <th style="font-size: 18px; text-align: left">Total Harga</th>
+                                                    <th>
+                                                        <input class="form-control form-control-user" id="total" readonly>
+                                                    </th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="spacer-end" colspan="4"></td> <!-- Menambahkan jarak antara baris -->
+                                                </tr>
+
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th>
+                                                        <button type="submit" value="Kirim" class="btn btn-primary btn-user btn-block" style="width: 200px; float: right">
+                                                            Bayar
+                                                        </button>
+                                                    </th>
+                                                </tr>
+                                                <hr />
+                                                <tr>
+                                                    <td class="spacer-end" colspan="4"></td> <!-- Menambahkan jarak antara baris -->
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </form>
+
+                                    <script>
+                                        function validate() {
+                                            let jml1 = document.getElementById("jumlah1").value;
+                                            let jml2 = document.getElementById("jumlah2").value;
+                                            let jml3 = document.getElementById("jumlah3").value;
+                                            let jml4 = document.getElementById("jumlah4").value;
+
+
+                                            // Mendapatkan nilai dari checkbox (jika diperlukan)
+                                            let cb1 = document.getElementById("checkbox1").checked;
+                                            let cb2 = document.getElementById("checkbox2").checked;
+                                            let cb3 = document.getElementById("checkbox3").checked;
+                                            let cb4 = document.getElementById("checkbox4").checked; 
+
+                                            // Mendapatkan elemen-elemen radio button
+                                            let rb1 = document.getElementById("radio1").checked;
+                                            let rb2 = document.getElementById("radio2").checked;
+
+                                            let validate = true;
+
+                                            //Validasi Jumlah
+                                            let namaPattern = /^[a-zA-Z\s]*$/; // pola regex untuk huruf dan spasi
+
+                                            if (cb1) {
+                                                if (jml1.trim() === "") {
+                                                    document.getElementById("error_jml1").innerText = "Input jumlah !";
+                                                } else if (namaPattern.test(jml1.trim())) {
+                                                    document.getElementById("error_jml1").innerText = "Harus berupa angka !";
+                                                }  else {
+                                                    document.getElementById("error_jml1").innerText = "";
+                                                }
+                                                validate = false;
+                                            }
+
+                                            if (cb2) {
+                                                if (jml2.trim() === "") {
+                                                    document.getElementById("error_jml2").innerText = "Input jumlah !";
+                                                } else  if (namaPattern.test(jml2.trim())) {
+                                                    document.getElementById("error_jml2").innerText = "Harus berupa angka !";
+                                                } else {
+                                                    document.getElementById("error_jml2").innerText = "";
+                                                }
+                                                validate = false;
+                                            }
+
+                                            if (cb3) {
+                                                if (jml3.trim() === "") {
+                                                    document.getElementById("error_jml3").innerText = "Input jumlah !";
+                                                } else if (namaPattern.test(jml3.trim())) {
+                                                    document.getElementById("error_jml3").innerText = "Harus berupa angka !";
+                                                } else {
+                                                    document.getElementById("error_jml3").innerText = "";
+                                                }
+                                                validate = false;
+                                            }
+
+                                            if (cb4) {
+                                                if (jml4.trim() === "") {
+                                                    document.getElementById("error_jml4").innerText = "Input jumlah !";
+                                                } else if (namaPattern.test(jml4.trim())) {
+                                                    document.getElementById("error_jml4").innerText = "Harus berupa angka !";
+                                                }else {
+                                                    document.getElementById("error_jml4").innerText = "";
+                                                }
+                                                validate = false;
+                                            }
+
+                                            if (!cb1 && !cb2 && !cb3 && !cb4) {
+                                                document.getElementById("all_cb").innerText = "Pilih salah satu !";
+                                                validate = false
+                                            } else {
+                                                document.getElementById("all_cb").innerText = ""; //Hapus pesan jika valid
+                                            }
+
+                                            if (!rb1 && !rb2) {
+                                                document.getElementById("all_rb").innerText = "Pilih salah satu !";
+                                                validate = false
+                                            } else {
+                                                document.getElementById("all_rb").innerText = ""; //Hapus pesan jika valid
+                                            }
+
+                                            return validate;
+                                        }
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <br /><br />
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+
+                            <!-- DataTales Example -->
+                            <div id="pageStock" class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-size: 30px; text-align: center">Data Stok Bahan Baku</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nama Bahan</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Tanggal Pembelian</th>
+                                                    <th>Pemasok</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Nama Bahan</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Tanggal Pembelian</th>
+                                                    <th>Pemasok</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tepung Protein Tinggi</td>
+                                                    <td>35 kg</td>
+                                                    <td>Selasa, 21 Agustus 2023</td>
+                                                    <td>PT. Bogasari</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Telur</td>
+                                                    <td>20 kg</td>
+                                                    <td>Selasa, 21 Agustus 2023</td>
+                                                    <td>Telur Super Abadi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mentega</td>
+                                                    <td>70 kg</td>
+                                                    <td>Senin, 21 Agustus 2023</td>
+                                                    <td>PT. Blue band Indonesia</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Susu Bubuk Vanilla</td>
+                                                    <td>48 kg</td>
+                                                    <td>Jum'at, 24 Agustus 2023</td>
+                                                    <td>PT. Nestle Jaya</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Perisa Vanilla</td>
+                                                    <td>10 kg</td>
+                                                    <td>Jum'at, 24 Agustus 2023</td>
+                                                    <td>PT. Nestle Jaya</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ragi Instan</td>
+                                                    <td>12 kg</td>
+                                                    <td>Jum'at, 24 Agustus 2023</td>
+                                                    <td>PT. Aroma Kue</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Keju</td>
+                                                    <td>23 kg</td>
+                                                    <td>Sabtu, 4 September 2023</td>
+                                                    <td>PT. Cheezy</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Perisa Kopi</td>
+                                                    <td>7 kg</td>
+                                                    <td>Sabtu, 4 September 2023</td>
+                                                    <td>PT. Aroma Kue</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- Button Back -->
+                                        <a href="index.html" class="btn btn-primary btn-user btn-block" style="width: 200px; float: right">
+                                            Halaman Utama
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- End of Main Content -->
+                        <!-- Footer -->
+                        <footer class="sticky-footer bg-white">
+                            <div class="container my-auto">
+                                <div class="copyright text-center my-auto">
+                                    <span>Copyright &copy; Your Website 2021</span>
+                                </div>
+                            </div>
+                        </footer>
+                        <!-- End of Footer -->
+
+                    </div>
+                    <!-- End of Content Wrapper -->
+
+                </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

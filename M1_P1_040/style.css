@@ -1,0 +1,15 @@
+﻿.bg-primer {
+    background-image: linear-gradient(180deg, #8ECDDD, #FFCC70);
+    background-size: cover;
+}
+
+.btn-primer {
+    background-color: #1D5D9B; 
+    color: #fff;
+}
+
+.img-login {
+    background: url("https://images.search.yahoo.com/search/images;_ylt=Awr9.gPBeQJl03QI0ieJzbkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X1MDOTYwNjI4NTcEX3IDMgRmcgNtY2FmZWUEZnIyA3A6cyx2OmksbTpzYi10b3AEZ3ByaWQDBG5fcnNsdAMwBG5fc3VnZwMwBG9yaWdpbgNpbWFnZXMuc2VhcmNoLnlhaG9vLmNvbQRwb3MDMARwcXN0cgMEcHFzdHJsAzAEcXN0cmwDOARxdWVyeQN1bnNwbGFzaAR0X3N0bXADMTY5NDY2MTA2Ng--?p=unsplash&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&ei=UTF-8&x=wrt&type=E211US885G0#id=1&iurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503864664483-e8a499e2eb22%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26w%3D1000%26q%3D80&action=click");
+    background-position: center;
+    background-size: cover;
+}
